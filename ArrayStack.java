@@ -13,45 +13,45 @@ public int size()
 }
 public void push(int data) 
 {
-   if (isFull()) {
-   System.out.println("Stack is Overflow. Not possible to insert in Full stack");
-   }  else
-    {
+if (isFull())
+{
+System.out.println("Stack is Overflow. Not possible to insert in Full stack");
+}
+else{
 
-      stack[++top] = data;
-      System.out.println("Element  is inserted");
-        }
-    }
+stack[++top] = data;
+System.out.println("Element is inserted");
+}
+}
 public int pop() 
 {
- int defaultvalue = -1;
- if(isEmpty())
- {
-    System.out.println("“Stack is Underflow. No elements to be popped in Empty Stack");
- }
- else{
-    int poppedItem=stack[top];
-    top--;
-   
- }
-  return defaultvalue;
+int defaultvalue = -1;
+if(isEmpty())
+{
+ System.out.println("Stack is Underflow. No elements to be popped in Empty Stack");   
 }
+else{
+    int poppeditem = stack[top];
+    top--;
+}
+    return defaultvalue;
+
+}
+
 public boolean isFull()
 {
-  if(size() == capacity){
-    return true;
-   } 
-   else{
-        return false;
-    }
+
+return(size() == capacity);
 }
 public boolean isEmpty()
 {
-   if(top < 0){
-    return true;
-   }else{
-    return false;
-   }
+   if (top < 0) {
+
+  return true; 
+} else {
+
+  return false;
+}
 }
 public void display()
 {
@@ -64,6 +64,7 @@ public void display()
     System.out.println(stack[i]);
     }
 }
+
 public static void main(String[] args)
 {
     ArrayStack s=new ArrayStack(5);
